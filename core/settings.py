@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'qrify',
     'ckeditor',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

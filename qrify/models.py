@@ -9,6 +9,7 @@ from ckeditor.fields import RichTextField
 import uuid 
 from django.utils.html import strip_tags,escape
 from html2text import html2text
+from django.urls import reverse
 
 def qr_code_upload_path(instance, filename):
     folder_name = timezone.now().strftime('%Y/%m/%d')
@@ -52,6 +53,9 @@ class UrlQrCode(QRCodeBase):
 
     def get_qr_code_content(self):
         return self.url
+    
+    def get_absolute_url(self):
+        return reverse('qr_code_detail', args=[str(self.id)])
 
 class TextQrCode(QRCodeBase):
     text = RichTextField(blank=True, null=True, verbose_name='Text Content')
@@ -62,3 +66,6 @@ class TextQrCode(QRCodeBase):
     def get_qr_code_content(self):
         plain_text = strip_tags(self.text)
         return escape(plain_text)
+    
+    def get_absolute_url(self):
+        return reverse('qr_code_detail', args=[str(self.id)])
