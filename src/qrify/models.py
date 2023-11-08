@@ -1,3 +1,4 @@
+import os
 from django.utils import timezone
 from django.db import models
 import qrcode
@@ -9,9 +10,20 @@ import uuid
 from django.utils.html import strip_tags,escape
 from html2text import html2text
 
+def qr_code_upload_path(instance, filename):
+    folder_name = timezone.now().strftime('%Y/%m/%d')
+    if isinstance(instance, UrlQrCode):
+        subfolder_name = 'url'
+    elif isinstance(instance, TextQrCode):
+        subfolder_name = 'text'
+    else:
+        subfolder_name = 'other'
+    upload_path = os.path.join('qr-codes/', subfolder_name, folder_name)
+    return os.path.join(upload_path, filename)
+
 
 class QRCodeBase(models.Model):
-    image = models.ImageField(upload_to='images/qr-codes/', blank=True, verbose_name='QR Code Image')
+    image = models.ImageField(upload_to=qr_code_upload_path, blank=True, verbose_name='QR Code Image')
 
     class Meta:
         abstract = True
