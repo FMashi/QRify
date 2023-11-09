@@ -1,0 +1,533 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /api/url/create/:
+    post:
+      operationId: createUrlQrCode
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UrlQrCode'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/UrlQrCode'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/UrlQrCode'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UrlQrCode'
+          description: ''
+      tags:
+      - api
+  /api/text/create/:
+    post:
+      operationId: createTextQrCode
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TextQrCode'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/TextQrCode'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TextQrCode'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TextQrCode'
+          description: ''
+      tags:
+      - api
+  /api/phone/create/:
+    post:
+      operationId: createPhoneQrCode
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PhoneQrCode'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PhoneQrCode'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PhoneQrCode'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PhoneQrCode'
+          description: ''
+      tags:
+      - api
+  /api/vcard/create/:
+    post:
+      operationId: createVCardQRCode
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VCardQRCode'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VCardQRCode'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VCardQRCode'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VCardQRCode'
+          description: ''
+      tags:
+      - api
+  /api/email/create/:
+    post:
+      operationId: createEmailQRCode
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmailQRCode'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/EmailQRCode'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/EmailQRCode'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmailQRCode'
+          description: ''
+      tags:
+      - api
+  /api/sms/create/:
+    post:
+      operationId: createSMSQRCode
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SMSQRCode'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SMSQRCode'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SMSQRCode'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SMSQRCode'
+          description: ''
+      tags:
+      - api
+  /api/wifi/create/:
+    post:
+      operationId: createWiFiQRCode
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WiFiQRCode'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/WiFiQRCode'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/WiFiQRCode'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WiFiQRCode'
+          description: ''
+      tags:
+      - api
+  /api/socialmedia/create/:
+    post:
+      operationId: createSocialMediaQRCode
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SocialMediaQRCode'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SocialMediaQRCode'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SocialMediaQRCode'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SocialMediaQRCode'
+          description: ''
+      tags:
+      - api
+  /api/pdf/create/:
+    post:
+      operationId: createPdfQRCode
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PdfQRCode'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PdfQRCode'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PdfQRCode'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PdfQRCode'
+          description: ''
+      tags:
+      - api
+  /api/mp3/create/:
+    post:
+      operationId: createMP3QRCode
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MP3QRCode'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/MP3QRCode'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/MP3QRCode'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MP3QRCode'
+          description: ''
+      tags:
+      - api
+  /api/appstore/create/:
+    post:
+      operationId: createAppStoreQRCode
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AppStoreQRCode'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AppStoreQRCode'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AppStoreQRCode'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AppStoreQRCode'
+          description: ''
+      tags:
+      - api
+components:
+  schemas:
+    UrlQrCode:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        image:
+          type: string
+          format: binary
+        url:
+          type: string
+          format: uri
+          nullable: true
+          maxLength: 200
+          pattern: "^(?:[a-z0-9.+-]*)://(?:[^\\s:@/]+(?::[^\\s:@/]*)?@)?(?:(?:0|25[0-5]|2[0-4][0-9]|1[0-9]?[0-9]?|[1-9][0-9]?)(?:\\\
+            .(?:0|25[0-5]|2[0-4][0-9]|1[0-9]?[0-9]?|[1-9][0-9]?)){3}|\\[[0-9a-f:.]+\\\
+            ]|([a-z\xA1-\uFFFF0-9](?:[a-z\xA1-\uFFFF0-9-]{0,61}[a-z\xA1-\uFFFF0-9])?(?:\\\
+            .(?!-)[a-z\xA1-\uFFFF0-9-]{1,63}(?<!-))*\\.(?!-)(?:[a-z\xA1-\uFFFF-]{2,63}|xn--[a-z0-9]{1,59})(?<!-)\\\
+            .?|localhost))(?::[0-9]{1,5})?(?:[/?#][^\\s]*)?\\z"
+    TextQrCode:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        image:
+          type: string
+          format: binary
+        text:
+          type: string
+          nullable: true
+          maxLength: 500
+    PhoneQrCode:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        image:
+          type: string
+          format: binary
+        number:
+          type: string
+          nullable: true
+          maxLength: 128
+    VCardQRCode:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        image:
+          type: string
+          format: binary
+        name:
+          type: string
+          maxLength: 150
+        contact:
+          type: string
+          nullable: true
+          maxLength: 128
+        email:
+          type: string
+          format: email
+          maxLength: 255
+        company:
+          type: string
+          nullable: true
+          maxLength: 150
+        street:
+          type: string
+          nullable: true
+          maxLength: 100
+        city:
+          type: string
+          nullable: true
+          maxLength: 100
+        state:
+          type: string
+          nullable: true
+          maxLength: 100
+        country:
+          type: string
+          nullable: true
+          maxLength: 100
+        website:
+          type: string
+          format: uri
+          nullable: true
+          maxLength: 255
+          pattern: "^(?:[a-z0-9.+-]*)://(?:[^\\s:@/]+(?::[^\\s:@/]*)?@)?(?:(?:0|25[0-5]|2[0-4][0-9]|1[0-9]?[0-9]?|[1-9][0-9]?)(?:\\\
+            .(?:0|25[0-5]|2[0-4][0-9]|1[0-9]?[0-9]?|[1-9][0-9]?)){3}|\\[[0-9a-f:.]+\\\
+            ]|([a-z\xA1-\uFFFF0-9](?:[a-z\xA1-\uFFFF0-9-]{0,61}[a-z\xA1-\uFFFF0-9])?(?:\\\
+            .(?!-)[a-z\xA1-\uFFFF0-9-]{1,63}(?<!-))*\\.(?!-)(?:[a-z\xA1-\uFFFF-]{2,63}|xn--[a-z0-9]{1,59})(?<!-)\\\
+            .?|localhost))(?::[0-9]{1,5})?(?:[/?#][^\\s]*)?\\z"
+      required:
+      - name
+      - email
+    EmailQRCode:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        image:
+          type: string
+          format: binary
+        email:
+          type: string
+          format: email
+          maxLength: 255
+      required:
+      - email
+    SMSQRCode:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        image:
+          type: string
+          format: binary
+        number:
+          type: string
+          maxLength: 20
+      required:
+      - number
+    WiFiQRCode:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        image:
+          type: string
+          format: binary
+        ssid:
+          type: string
+          maxLength: 50
+        hidden:
+          type: boolean
+        password:
+          type: string
+          maxLength: 50
+        encryption:
+          enum:
+          - none
+          - wpa
+          - wep
+          type: string
+      required:
+      - ssid
+      - password
+    SocialMediaQRCode:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        image:
+          type: string
+          format: binary
+        social_media:
+          enum:
+          - Twitter
+          - Facebook
+          type: string
+        type:
+          enum:
+          - Profile
+          - Post
+          - Username
+          type: string
+        profile:
+          type: string
+          nullable: true
+          maxLength: 255
+        post:
+          type: string
+          nullable: true
+          maxLength: 280
+        username:
+          type: string
+          nullable: true
+          maxLength: 15
+      required:
+      - social_media
+    PdfQRCode:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        image:
+          type: string
+          format: binary
+        pdf_file:
+          type: string
+          format: binary
+      required:
+      - pdf_file
+    MP3QRCode:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        image:
+          type: string
+          format: binary
+        title:
+          type: string
+          maxLength: 255
+        artist:
+          type: string
+          maxLength: 255
+        audio_file:
+          type: string
+          format: binary
+      required:
+      - title
+      - artist
+      - audio_file
+    AppStoreQRCode:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        image:
+          type: string
+          format: binary
+        app_name:
+          type: string
+          maxLength: 255
+        platform:
+          type: string
+          maxLength: 50
+        app_url:
+          type: string
+          format: uri
+          maxLength: 200
+          pattern: "^(?:[a-z0-9.+-]*)://(?:[^\\s:@/]+(?::[^\\s:@/]*)?@)?(?:(?:0|25[0-5]|2[0-4][0-9]|1[0-9]?[0-9]?|[1-9][0-9]?)(?:\\\
+            .(?:0|25[0-5]|2[0-4][0-9]|1[0-9]?[0-9]?|[1-9][0-9]?)){3}|\\[[0-9a-f:.]+\\\
+            ]|([a-z\xA1-\uFFFF0-9](?:[a-z\xA1-\uFFFF0-9-]{0,61}[a-z\xA1-\uFFFF0-9])?(?:\\\
+            .(?!-)[a-z\xA1-\uFFFF0-9-]{1,63}(?<!-))*\\.(?!-)(?:[a-z\xA1-\uFFFF-]{2,63}|xn--[a-z0-9]{1,59})(?<!-)\\\
+            .?|localhost))(?::[0-9]{1,5})?(?:[/?#][^\\s]*)?\\z"
+      required:
+      - app_name
+      - platform
+      - app_url
