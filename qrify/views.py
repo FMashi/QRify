@@ -1,10 +1,35 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import UrlQrCode, TextQrCode
 from .forms import UrlQrCodeForm, TextQrCodeForm  
 from django.utils.encoding import uri_to_iri 
 from .serializers import UrlQrCodeSerializer, TextQrCodeSerializer
-from rest_framework import generics
+from rest_framework import generics,viewsets
+from .models import (
+    UrlQrCode,
+    TextQrCode,
+    PhoneQrCode,
+    VCardQRCode,
+    EmailQRCode,
+    SMSQRCode,
+    WiFiQRCode,
+    SocialMediaQRCode,
+    PdfQRCode,
+    MP3QRCode,
+    AppStoreQRCode,
+)
+from .serializers import (
+    UrlQrCodeSerializer,
+    TextQrCodeSerializer,
+    PhoneQrCodeSerializer,
+    VCardQRCodeSerializer,
+    EmailQRCodeSerializer,
+    SMSQRCodeSerializer,
+    WiFiQRCodeSerializer,
+    SocialMediaQRCodeSerializer,
+    PdfQRCodeSerializer,
+    MP3QRCodeSerializer,
+    AppStoreQRCodeSerializer,
+)
 
 class UrlQrCodeCreateView(generics.CreateAPIView):
     queryset = UrlQrCode.objects.all()
@@ -13,22 +38,45 @@ class UrlQrCodeCreateView(generics.CreateAPIView):
 class TextQrCodeCreateView(generics.CreateAPIView):
     queryset = TextQrCode.objects.all()
     serializer_class = TextQrCodeSerializer
- 
-# class UrlQrCodeListCreateView(generics.ListCreateAPIView):
-#     queryset = UrlQrCode.objects.all()
-#     serializer_class = UrlQrCodeSerializer
 
-# class TextQrCodeListCreateView(generics.ListCreateAPIView):
-#     queryset = TextQrCode.objects.all()
-#     serializer_class = TextQrCodeSerializer
-# class UrlQrCodeRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-#     queryset = UrlQrCode.objects.all()
-#     serializer_class = UrlQrCodeSerializer
-# class TextQrCodeRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-#     queryset = TextQrCode.objects.all()
-#     serializer_class = TextQrCodeSerializer
+class PhoneQrCodeCreateView(generics.CreateAPIView):
+    queryset = PhoneQrCode.objects.all()
+    serializer_class = PhoneQrCodeSerializer
 
-    
+class VCardQRCodeCreateView(generics.CreateAPIView):
+    queryset = VCardQRCode.objects.all()
+    serializer_class = VCardQRCodeSerializer
+
+# Create viewsets for other models using the same pattern
+
+class EmailQRCodeCreateView(generics.CreateAPIView):
+    queryset = EmailQRCode.objects.all()
+    serializer_class = EmailQRCodeSerializer
+
+class SMSQRCodeCreateView(generics.CreateAPIView):
+    queryset = SMSQRCode.objects.all()
+    serializer_class = SMSQRCodeSerializer
+
+class WiFiQRCodeCreateView(generics.CreateAPIView):
+    queryset = WiFiQRCode.objects.all()
+    serializer_class = WiFiQRCodeSerializer
+
+class SocialMediaQRCodeCreateView(generics.CreateAPIView):
+    queryset = SocialMediaQRCode.objects.all()
+    serializer_class = SocialMediaQRCodeSerializer
+
+class PdfQRCodeCreateView(generics.CreateAPIView):
+    queryset = PdfQRCode.objects.all()
+    serializer_class = PdfQRCodeSerializer
+
+class MP3QRCodeCreateView(generics.CreateAPIView):
+    queryset = MP3QRCode.objects.all()
+    serializer_class = MP3QRCodeSerializer
+
+class AppStoreQRCodeCreateView(generics.CreateAPIView):
+    queryset = AppStoreQRCode.objects.all()
+    serializer_class = AppStoreQRCodeSerializer
+       
 def qr_code_list(request):
     url_qr_codes = UrlQrCode.objects.all()
     text_qr_codes = TextQrCode.objects.all()

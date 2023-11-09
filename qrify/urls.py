@@ -11,8 +11,17 @@ urlpatterns = [
     
     # api
     #Create 
-    path('api/url-qr-codes/create/', views.UrlQrCodeCreateView.as_view(), name='url_qr_code_create'),
-    path('api/text-qr-codes/create/', views.TextQrCodeCreateView.as_view(), name='text_qr_code_create'),
+    path('api/url/create/', views.UrlQrCodeCreateView.as_view(), name='url'),
+    path('api/text/create/', views.TextQrCodeCreateView.as_view(), name='text'),
+    path('api/phone/create/', views.PhoneQrCodeCreateView.as_view(), name='phone'),
+    path('api/vcard/create/', views.VCardQRCodeCreateView.as_view(), name='vcard'),
+    path('api/email/create/', views.EmailQRCodeCreateView.as_view(), name='email'),
+    path('api/sms/create/', views.SMSQRCodeCreateView.as_view(), name='sms'),
+    path('api/wifi/create/', views.WiFiQRCodeCreateView.as_view(), name='wifi'),
+    path('api/socialmedia/create/', views.SocialMediaQRCodeCreateView.as_view(), name='socialmedia'),
+    path('api/pdf/create/', views.PdfQRCodeCreateView.as_view(), name='pdf'),
+    path('api/mp3/create/', views.MP3QRCodeCreateView.as_view(), name='mp3'),
+    path('api/appstore/create/', views.AppStoreQRCodeCreateView.as_view(), name='appstore'),
 
 
     #Detail
