@@ -227,6 +227,7 @@ class SocialMediaQRCode(QRCodeBase):
     SOCIAL_MEDIA_CHOICES = [
         ('Twitter', 'Twitter'),
         ('Facebook', 'Facebook'),
+        ('LinkedIn', 'LinkedIn'),
     ]
 
     TYPE_CHOICES = [
@@ -259,6 +260,13 @@ class SocialMediaQRCode(QRCodeBase):
                 content = f'https://www.facebook.com/sharer/sharer.php?u={self.profile}&quote={self.post}'
             elif self.type == 'Username':
                 content = self.username
+        elif self.social_media == 'LinkedIn':
+            if self.type == 'Profile':
+                content = f'https://www.linkedin.com/in/{self.profile}/'
+            elif self.type == 'Post':
+                content = f'https://www.linkedin.com/sharing/share-offsite/?url={self.post}'
+            elif self.type == 'Username':
+                content = f'https://www.linkedin.com/in/{self.username}/'
         return content
     def __str__(self):
         return f'{self.social_media} QR Code: {self.get_qr_code_content()}'
