@@ -263,8 +263,6 @@ class SocialMediaQRCode(QRCodeBase):
     def __str__(self):
         return f'{self.social_media} QR Code: {self.get_qr_code_content()}'
 
-
-
 class PdfQRCode(QRCodeBase):
     pdf_file = models.FileField(upload_to='files/pdf/', verbose_name='PDF File')
 
